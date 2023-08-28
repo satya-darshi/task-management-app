@@ -1,0 +1,35 @@
+<%- include("./partials/head") -%>
+<%- include("./partials/header") -%>
+
+<div class="login-container account">
+  <h2 class="account-heading">YOUR ACCOUNT</h2>
+  <!-- <div>
+    <img class="user-photo" src="">
+  </div> -->
+  <div>
+    <form class="data-form form-signin">
+      <label for="name">Name</label>
+      <input type="text" name="name" value="<%= name %>" class="form-control name" required>
+      <label for="email">Email address</label>
+      <input name="email" value="<%= email %>" class="form-control email" required>
+      <button type="submit" class="save-data signin btn">Save changes</button>
+    </form>
+    <div>
+      <h3>Change your password</h3>
+      <form class="password-form form-signin">
+        <label for="">New password</label>
+        <input name="newPassword" class="form-control new-password" id="newPassword" required placeholder="&#9679;&#9679;&#9679;&#9679;&#9679;&#9679;&#9679;">
+        <label for="">Confirm password</label>
+        <input name="confirmPassword" class="form-control" required placeholder="&#9679;&#9679;&#9679;&#9679;&#9679;&#9679;&#9679;">
+        <button type="submit" class="save-password signin btn">Save password</button>
+      </form>
+    </div>
+    <div>
+      <form class="delete-account">
+        <button type="submit" class="login-btn delete">Delete account</button>
+      </form>
+    </div>
+  </div>
+</div>
+<canvas class="background"></canvas>
+<%- include("./partials/footer") -%>

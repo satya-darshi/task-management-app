@@ -1,0 +1,49 @@
+<%- include("./partials/head") -%>
+<%- include("./partials/header") -%>
+
+  <div class="tasks">
+    <div class="box" id="heading">
+      <h1 class="heading"><%= date %></h1>
+    </div>
+    <div class="select-container">
+      <div class="select">
+        <p>Sort by</p>
+        <form class="sort dropdown">
+          <select class="sort-dropdown">
+            <option value="asc">Date (ascending)</option>
+            <option value="desc">Date (descending)</option>
+          </select>
+        </form>
+      </div>
+      <div class="select">
+        <p>Filter</p>
+        <form class="filter dropdown">
+          <select class="filter-dropdown">
+            <option value="all">All</option>
+            <option value="comp">Completed</option>
+            <option value="incomp">Incompleted</option>
+          </select>
+        </form>
+      </div>
+      <!-- <div class="select">
+        <p>Results per page</p>
+        <form class="count dropdown">
+          <select class="count-dropdown">
+            <option value="all">All</option>
+            <option value="5">5</option>
+            <option value="10">10</option>
+            <option value="20">20</option>
+          </select>
+        </form>
+      </div> -->
+    </div>
+    <div class="box">
+      <!-- JS content -->
+      <form class="item newItem">
+        <textarea name="name" rows="1" class="newTask" type="text" name="newTask" placeholder="New Task" autocomplete="off" required></textarea>
+        <button class="addTask" type="submit">+</button>
+      </form>
+    </div>
+  </div>
+
+<%- include("./partials/footer") -%>

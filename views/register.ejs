@@ -1,0 +1,24 @@
+<%- include("./partials/head") -%>
+<%- include("./partials/header") -%>
+
+<div class="signup-container register-container">
+    <form action="/users" method="post" class="form-signin register-form">
+        <h1 class="h1">Create an account</h1>
+        <% if (message) { %>
+          <p class="incorrect message"><%= message %></p>
+          <% } %>
+        <label for="username">Name</label>
+        <input class="form-control" type="text" name="name" id="username" placeholder="John Doe" required />
+        <label for="email">Email</label>
+        <input class="form-control" type="text" name="email" id="email" placeholder="name@example.com" required />
+        <label for="password">Password</label>
+        <input class="form-control" type="password" name="newPassword" id="password" placeholder="&#9679;&#9679;&#9679;&#9679;&#9679;&#9679;&#9679;" required />
+        <label for="passwordRepeat">Confirm Password</label>
+        <input class="form-control" type="password" name="confirmPassword" placeholder="&#9679;&#9679;&#9679;&#9679;&#9679;&#9679;&#9679;" required />
+        <button class="signin btn register" type="submit">Register</button>
+        <p class="switch">Already have an account? <a href="/users/login">Sign in</a></p>
+    </form>
+  </div>
+  <canvas class="background"></canvas>
+
+<%- include("./partials/footer") -%>
